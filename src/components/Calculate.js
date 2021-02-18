@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import Inputbox from "./Inputbox"
+import {CalculateContext} from "../context/CalculateContext"
 const Calculate = () => {
+
   const [num1, setNum1] = useState("0");
   const [num2, setNum2] = useState("0");
-  const [sum, setSum] = useState("");
+  const [sum,setSum]=useContext(CalculateContext)
 
   const sumHandler = () => {
     setNum1(Math.floor(Math.random() * 10));
